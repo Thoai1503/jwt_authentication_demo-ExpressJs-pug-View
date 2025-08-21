@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  div(style='display:flex;')
+
+    div #{user.getName()} &nbsp;&nbsp;
+    br
+    div #{user.getUserName()} &nbsp;&nbsp;
+    br
+    div #{user.getEmail()} &nbsp;&nbsp;
+
