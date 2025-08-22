@@ -14,6 +14,7 @@ router.get("/register", function (req, res, next) {
 });
 router.get("/myprofile", checkToken, function (req, res, next) {
   console.log("Token: " + req.cookies.token);
+  console.log("User: " + JSON.stringify(req.user));
   res.render("myprofile", { title: "myprofile", user: req.user });
 });
 
