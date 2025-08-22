@@ -9,6 +9,9 @@ router.get("/", function (req, res, next) {
 router.get("/login", function (req, res, next) {
   res.render("login", { title: "login" });
 });
+router.get("/register", function (req, res, next) {
+  res.render("register", { title: "register" });
+});
 router.get("/myprofile", checkToken, function (req, res, next) {
   console.log("Token: " + req.cookies.token);
   res.render("myprofile", { title: "myprofile", user: req.user });
